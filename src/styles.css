@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+  }
+  
+  .categories, .products, .cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .category, .product, .cart-item {
+    width: 45%;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .category img, .product img, .cart-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (min-width: 768px) {
+    .category, .product, .cart-item {
+      width: 22%;
+    }
+  }
+  

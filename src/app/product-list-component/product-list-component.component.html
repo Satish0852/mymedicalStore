@@ -1,0 +1,13 @@
+
+
+<div>
+    <button (click)="oCategoryChange(1)">Baby    </button>
+    <button (click)="oCategoryChange(4)">forHer  </button>
+    <br>
+    <button (click)="oCategoryChange(3)">cold   </button>
+    <button (click)="oCategoryChange(2)">pain   </button>
+</div>
+<div *ngFor="let product of products">
+<p>product: {{product.name}}</p>
+<button (click)="addToCart(product)" >  addTo<i class="fa-solid fa-cart-shopping"></i></button>
+</div>
