@@ -1,0 +1,138 @@
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Header Section */
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    border-radius: 8px;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  header p {
+    font-size: 18px;
+    margin: 10px 0 0;
+  }
+  
+  /* Store Image */
+  .store-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  
+  /* Store Description Section */
+  .store-description {
+    margin: 40px 0;
+  }
+  
+  .store-description h2 {
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .store-description p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Testimonials Section */
+  .testimonials {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin: 40px 0;
+  }
+  
+  .testimonials h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial {
+    margin-bottom: 30px;
+  }
+  
+  .testimonial blockquote {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+    margin: 0;
+    padding: 0 10px;
+    border-left: 5px solid #4CAF50;
+  }
+  
+  .testimonial cite {
+    display: block;
+   
+  }  
+  /* Footer Styles */
+.footer {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+    color: #333;
+    text-align: left;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 50px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-about, .footer-contact {
+    flex-basis: 45%;
+    margin-bottom: 20px;
+  }
+  
+  .footer h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #11d854;
+  }
+  
+  .footer p {
+    margin: 5px 0;
+    line-height: 1.6;
+  }
+  
+  .footer-contact p {
+    font-size: 0.95em;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.85em;
+    color: #777;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+    }
+  
+    .footer-about, .footer-contact {
+      flex-basis: 100%;
+    }
+  }
+  

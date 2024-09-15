@@ -1,4 +1,4 @@
-<div
+<!-- <div
  *ngFor="let item of cart">
 <p>{{item.product.name}}-Quantity{{item.product.quantity}}</p>
 <button (click)="increaseQuantity(item.product)">+</button>
@@ -7,4 +7,26 @@
 
 <button (click)="sendToWatsApp()" class="send-to-watsapp-icon">
     <i class="fa-brands fa-whatsapp"></i>
-  </button>
+  </button> -->
+<!-- Products List: Assuming products are available in a parent component or service -->
+<!-- Cart Icon Button -->
+<button (click)="toggleCartVisibility()" class="cart-icon-btn">
+  <i class="fa fa-shopping-cart"></i> Cart ({{ cart.length }})
+</button>
+
+<!-- Cart Section: Show this only when cartVisible is true -->
+<div *ngIf="cartVisible" class="cart-details">
+  <h2>Your Cart</h2>
+
+  <!-- Display each product in the cart -->
+  <div *ngFor="let item of cart" class="cart-item">
+    <p>{{ item.product.name }} - Quantity: {{ item.quantity }}</p>
+  </div>
+  <button (click)="sendToWatsApp()" class="send-to-watsapp-icon">
+    <i class="fa-brands fa-whatsapp"> click to connect</i>
+  </button> 
+  <!-- If no items in the cart, show this message -->
+  <div *ngIf="cart.length === 0">
+    <p>Your cart is empty.</p>
+  </div>
+</div>

@@ -9,6 +9,7 @@ import { CartServiceService } from '../cart-service.service';
 })
 export class CartComponent {
 cart:{product:Product,quantity:number}[]=[];
+cartVisible: boolean = false; // Controls cart visibility
 
 constructor(private CartService:CartServiceService,){
 this.cart=this.CartService.getCart();
@@ -19,12 +20,15 @@ this.CartService.addProduct(p)
 decreaseQuantity(p:Product){
   this,this.CartService.removeProduct(p);
 }
+toggleCartVisibility() {
+  this.cartVisible = !this.cartVisible; // Toggle cart visibility
+}
 sendToWatsApp(){
   //const phoneNumber = '+917013095450';
   let message = 'Thank you for shopping with us! Here are the details of your cart:\n\n';
 
   this.cart.forEach(item => {
-    message += `${item.product.name} - ₹${item.quantity} \n`;
+    message += `${item.product.name} - ${item.quantity} \n`;
   });
   
   message += `\nWe appreciate your visit to our medical store!`;
